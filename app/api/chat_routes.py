@@ -545,13 +545,13 @@ def send_message():
             }), 400
 
         chat_wnd = wx_instance.GetSubWindow(who)
-        # time.sleep(0.2)  # 等待窗口加载
+        time.sleep(0.5)  # 等待窗口加载
         if chat_wnd:
             chat_wnd.SendMsg(message, at=at_list)
         else:
             # 显示聊天窗口
             wx_instance.ChatWith(who)
-            # time.sleep(0.5)  # 等待窗口加载
+            time.sleep(0.5)  # 等待窗口加载
 
             # 发送消息
             if at_list:
